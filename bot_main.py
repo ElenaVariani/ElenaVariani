@@ -1,6 +1,8 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import requests
 
+TOKEN="6026699200:AAF4n1jFOT8vYhPH4Yz66IGc_Pue3l3WjJU"
+
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Ciao, benvenuto nel bot della Taverna di Enry! Come posso aiutarti?")
     
@@ -24,7 +26,7 @@ def unknown(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Mi dispiace, non ho capito😭")
 
 def main():
-    updater = Updater('6026699200:AAF4n1jFOT8vYhPH4Yz66IGc_Pue3l3WjJU', use_context=True)
+    updater = Updater('TOKEN', use_context=True)
 
     dp = updater.dispatcher
 
